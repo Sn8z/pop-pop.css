@@ -1,0 +1,47 @@
+/* Pop-Pop.css */
+/* Defaults & variables */
+:root {
+  --text-color: #efefef;
+  --bg-color: #333;
+  --shadow-color: #333;
+  --transition-delay: 0s;
+  --border-radius: 5px;
+  --padding: 8px;
+  --offset: 15px; }
+
+/* SCSS */
+[data-pop][aria-label] {
+  position: relative; }
+  [data-pop][aria-label]::after {
+    opacity: 0;
+    content: ""; }
+  [data-pop][aria-label]:hover::after, [data-pop][aria-label]:focus::after {
+    opacity: 1;
+    content: attr(aria-label);
+    transition: opacity 0s linear var(--transition-delay);
+    position: absolute;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    background-color: var(--bg-color);
+    padding: var(--padding);
+    color: var(--text-color);
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+    z-index: 999; }
+  [data-pop][aria-label][data-pop-position="top"]::after {
+    bottom: calc(100% + var(--offset));
+    left: 50%;
+    transform: translateX(-50%); }
+  [data-pop][aria-label][data-pop-position="bottom"]::after {
+    top: calc(100% + var(--offset));
+    left: 50%;
+    transform: translateX(-50%); }
+  [data-pop][aria-label][data-pop-position="left"]::after {
+    right: calc(100% + var(--offset));
+    top: 50%;
+    transform: translateY(-50%); }
+  [data-pop][aria-label][data-pop-position="right"]::after {
+    left: calc(100% + var(--offset));
+    top: 50%;
+    transform: translateY(-50%); }

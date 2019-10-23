@@ -1,0 +1,31 @@
+{
+	"name": "pop-pop.css",
+	"version": "0.0.1",
+	"description": "A pure CSS tooltip library",
+	"main": "pop-pop.css",
+	"scripts": {
+		"build:all": "yarn build && yarn build:min && yarn build:docs",
+		"build": "node-sass src/pop-pop.scss dist/pop-pop.css",
+		"build:min": "node-sass src/pop-pop.scss dist/pop-pop.min.css --output-style compressed",
+		"build:docs": "node-sass src/pop-pop.scss docs/pop-pop.min.css --output-style compressed"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sn8z/pop-pop.css.git"
+	},
+	"keywords": [
+		"tooltip",
+		"popper",
+		"popover",
+		"title"
+	],
+	"author": "Marcus Sneitz <marcus.sneitz@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Sn8z/pop-pop.css/issues"
+	},
+	"homepage": "https://github.com/Sn8z/pop-pop.css#readme",
+	"devDependencies": {
+		"node-sass": "^4.12.0"
+	}
+}

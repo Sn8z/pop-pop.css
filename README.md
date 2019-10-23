@@ -1,2 +1,2 @@
-# pop-pop.css
+# Pop-Pop.css
 A pure CSS tooltip library
