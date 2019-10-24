@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pop-Pop.css</title>
+	<meta name="description" content="Pop-Pop.css is a pure CSS tooltip library.">
+	<meta name="author" content="Sn8z">
+	<link rel="stylesheet" href="pop-pop.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="header-logo">
+			<h1 id="header-logo-text">Pop-Pop.css</h1>
+		</div>
+		<div class="header-links">
+			<a href="#installation">Installation</a>
+			<a href="#basic">Basic usage</a>
+			<a href="#docs">Docs</a>
+		</div>
+		<div class="header-actions">
+			<a href="https://github.com/Sn8z/pop-pop.css" target="blank" aria-label="View at GitHub" data-pop="bottom"
+				data-pop-arrow>
+				<img src="GitHub_Logo_White.png" width="70px">
+			</a>
+		</div>
+	</header>
+	<main>
+		<section id="intro">
+			<h2>Pop-Pop.css is a <span class="orange-text">pure CSS</span> tooltip library with <span class="orange-text">no
+					dependencies</span> and support for <span class="orange-text">CSS custom properties</span>.
+			</h2>
+		</section>
+		<h1 id="installation">Installation</h1>
+		<section class="installation">
+			<h4 class="orange-text">NPM or Yarn</h4>
+			<code>npm install @sn8z/pop-pop.css</code>
+			<br>
+			<code>yarn add @sn8z/pop-pop.css</code>
+			<h4 class="orange-text">CDN</h4>
+			<code>insert info here</code>
+			<h4 class="orange-text">Download</h4>
+			<code>insert info here</code>
+		</section>
+		<h1 id="basic">Basic usage</h1>
+		<section>
+			<div class="section-left">
+				<p aria-label="Tooltip text" data-pop>Just add the attributes 'aria-label' and
+					'data-pop' to the tag where you want a tooltip to appear.</p>
+			</div>
+			<div class="section-right">
+				<code>&lt;p aria-label="Tooltip text" data-pop&gt;...&lt;/p&gt;</code>
+			</div>
+		</section>
+		<h1 id="docs">Docs</h1>
+		<section id="examples-nav">
+			<a href="#">Positioning</a>
+			<a href="#">Arrow</a>
+			<a href="#">Delay</a>
+			<a href="#">Visibility</a>
+			<a href="#">Non-closing tags</a>
+			<a href="#">CSS custom properties</a>
+			<a href="#issues">Limitations</a>
+		</section>
+		<h3>Positioning</h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm above!" data-pop="top">Hover
+					me!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm above!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm to the right!" data-pop="right">Hover
+					me!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm to the right!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm below!" data-pop="bottom">Hover
+					me!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm below!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm to the left!" data-pop="left">Hover
+					me!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm to the left!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<h3>Arrow</h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I've an arrow!" data-pop data-pop-arrow>Hover
+					me!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I've an arrow!" data-pop data-pop-arrow&gt;Hover	me!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<h3>Delay</h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm delayed!" data-pop data-pop-delay="short" data-pop-arrow>Hover
+					me for 0.5 seconds!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-pos="top" data-pop-delay="short"&gt;Hover	me for 1 second!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm delayed!" data-pop data-pop-delay="medium">Hover
+					me for 2 seconds!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="medium"&gt;Hover	me for 2 seconds!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm delayed!" data-pop data-pop-delay="long">Hover
+					me for 5 seconds!</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="long"&gt;Hover	me for 5 seconds!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<h3>Visibility</h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow>
+					I'm a button!
+				</button>
+			</div>
+			<div class="section-right">
+				<code>&lt;button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow&gt;I'm a button!&lt;/button&gt;</code>
+			</div>
+		</section>
+		<h3>CSS custom properties</h3>
+		<section>
+			<table>
+				<tr>
+					<th>CSS custom property</th>
+					<th>Default</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>--pop-text-color</td>
+					<td>#efefef</td>
+					<td>Tooltip text color</td>
+				</tr>
+				<tr>
+					<td>--pop-bg-color</td>
+					<td>#252525</td>
+					<td>Tooltip background color</td>
+				</tr>
+				<tr>
+					<td>--pop-shadow-color</td>
+					<td>#252525</td>
+					<td>Tooltip shadow color</td>
+				</tr>
+				<tr>
+					<td>--pop-transition-delay</td>
+					<td>0.2s</td>
+					<td>The delay before the tooltip is shown</td>
+				</tr>
+				<tr>
+					<td>--pop-animation-speed</td>
+					<td>0.1s</td>
+					<td>Tooltip animation speed</td>
+				</tr>
+				<tr>
+					<td>--pop-border-radius</td>
+					<td>5px</td>
+					<td>Tooltip border radius</td>
+				</tr>
+				<tr>
+					<td>--pop-padding</td>
+					<td>8px</td>
+					<td>Tooltip padding</td>
+				</tr>
+				<tr>
+					<td>--pop-offset</td>
+					<td>15px</td>
+					<td>Tooltip offset from element</td>
+				</tr>
+				<tr>
+					<td>--pop-font-size</td>
+					<td>12px</td>
+					<td>Font size</td>
+				</tr>
+				<tr>
+					<td>--pop-arrow-size</td>
+					<td>5px</td>
+					<td>Size of the tooltip arrow</td>
+				</tr>
+			</table>
+		</section>
+		<h3>Known issues</h3>
+		<section id="issues">
+			<h3 class="orange-text">Non-closing tags</h3>
+			<p>Since <span class="orange-text">Pop-Pop.css</span> makes use of pseudo elements it won't work on it's own with
+				non closing tags (img, input, hr etc.). In these cases you could wrap another tag around it and apply
+				Pop-Pop.css to it instead.</p>
+			<section>
+				<div class="section-left">
+					<span aria-label="POP POP!" data-pop data-pop-pos="top">
+						<img src="pop-pop.jpg">
+					</span>
+				</div>
+				<div class="section-right">
+					<code>&lt;span aria-label="POP POP!" data-pop&gt;&lt;img src="..."/&gt;&lt;/span&gt;</code>
+				</div>
+			</section>
+			<h3 class="orange-text">Other pseudo elements</h3>
+			<p>If the element has another ::after or ::before pseudo element attached to it Pop-Pop.css won't be able to work
+				correctly.</p>
+			<h3 class="orange-text">overflow: hidden;</h3>
+			<p>The tooltip will be cut off if the parent element has the attribute
+				<i>overflow: hidden;</i> enabled and there's limited space. This is unfortunately something that can't be solved
+				with CSS alone.</p>
+		</section>
+	</main>
+	<footer>
+		<p>Made by <a href="https://github.com/Sn8z" target="blank">Sn8z</a></p>
+	</footer>
+	<script src="scripts.js"></script>
+</body>
+
+</html>
