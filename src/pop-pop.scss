@@ -1,7 +1,18 @@
 /* Pop-Pop.css */
 
-/* Defaults & variables */
+/* TODO
+	- Sizes attribute (small / medium / large)
+	- Line breaks
+	- Background color attribute
+	- Text color attribute
+	- Border-radius attribute (?)
+	- Box shadow attribute (?)
+	- z-index variable
+	
+	- DOCS
+*/
 
+/* Defaults & variables */
 :root {
   --pop-text-color: #efefef;
 	--pop-bg-color: #252525;
@@ -24,7 +35,7 @@
 	position: absolute;
 	border-style: solid;
 	border-width: var(--pop-arrow-size);
-	z-index: 999;
+	z-index: 1000;
 }
 
 @mixin pop-pop-after {
@@ -51,15 +62,14 @@
 		transition-delay: 0.5s;
 	}
 	&[data-pop-delay="medium"]:hover::after, &[data-pop-delay="medium"]:hover::before {
-		transition-delay: 2s;
+		transition-delay: 1.5s;
 	}
 	&[data-pop-delay="long"]:hover::after, &[data-pop-delay="long"]:hover::before {
-		transition-delay: 5s;
+		transition-delay: 3s;
 	}
 }
 
 /* SCSS */
-
 [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label], [data-pop="top"][aria-label] {
 	position: relative;
 	&::after {

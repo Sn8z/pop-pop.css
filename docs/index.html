@@ -44,38 +44,39 @@
 			<br>
 			<div class="info-block">yarn add @sn8z/pop-pop.css</div>
 			<h4 class="orange-text">CDN</h4>
-			<div class="info-block">insert info here</div>
+			<pre><code class="language-html">&lt;link rel="stylesheet" href="CDN URL GOES HERE"&gt;</code></pre>
 			<h4 class="orange-text">Download</h4>
-			<div class="info-block">insert info here</div>
+			<p>If you want you can just download the normal or the minified CSS file from the GitHub repo and include it in
+				your HTML as you would normally.</p>
+			<pre><code class="language-html">&lt;link rel="stylesheet" href="pop-pop.css"&gt;</code></pre>
 		</section>
 		<h1 id="basic">Basic usage</h1>
 		<section>
 			<div class="section-left">
-				<p aria-label="Tooltip text" data-pop>Just add the attributes 'aria-label' and
-					'data-pop' to the tag where you want a tooltip to appear.</p>
+				<p aria-label="Tooltip text" data-pop>Just add the attributes <i class="orange-text">aria-label</i> and
+					<i class="orange-text">data-pop</i> to the tag where you want a tooltip to appear.</p>
 			</div>
 			<div class="section-right">
 				<pre><code class="language-html">&lt;p aria-label="Tooltip text" data-pop&gt;...&lt;/p&gt;</code></pre>
 			</div>
 		</section>
 		<h1 id="docs">Docs</h1>
-		<section id="examples-nav">
-			<a href="#">Positioning</a>
-			<a href="#">Arrow</a>
-			<a href="#">Delay</a>
-			<a href="#">Visibility</a>
-			<a href="#">Non-closing tags</a>
-			<a href="#">CSS custom properties</a>
+		<section id="examples-nav" class="info-block">
+			<a href="#positioning">Positioning</a>
+			<a href="#arrow">Arrow</a>
+			<a href="#delay">Delay</a>
+			<a href="#visibility">Visibility</a>
+			<a href="#css-custom-prop">CSS custom properties</a>
 			<a href="#issues">Limitations</a>
 		</section>
-		<h3>Positioning</h3>
+		<h3 id="positioning">Positioning</h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm above!" data-pop="top">Hover
 					me!</button>
 			</div>
 			<div class="section-right">
-				<pre><code class="language-html">&lt;button aria-label="I'm above!" data-pop data-pop-pos="top"&gt;
+				<pre><code class="language-html">&lt;button aria-label="I'm above!" data-pop="top"&gt;
 	Hover me!
 &lt;/button&gt;</code></pre>
 			</div>
@@ -86,7 +87,7 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<pre><code class="language-html">&lt;button aria-label="I'm to the right!" data-pop data-pop-pos="top"&gt;
+				<pre><code class="language-html">&lt;button aria-label="I'm to the right!" data-pop="right"&gt;
 	Hover me!
 &lt;/button&gt;</code></pre>
 			</div>
@@ -97,7 +98,7 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<pre><code class="language-html">&lt;button aria-label="I'm below!" data-pop data-pop-pos="top"&gt;
+				<pre><code class="language-html">&lt;button aria-label="I'm below!" data-pop="bottom"&gt;
 	Hover me!
 &lt;/button&gt;</code></pre>
 			</div>
@@ -108,12 +109,12 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<pre><code class="language-html">&lt;button aria-label="I'm to the left!" data-pop data-pop-pos="top"&gt;
+				<pre><code class="language-html">&lt;button aria-label="I'm to the left!" data-pop="left"&gt;
 	Hover me!
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3>Arrow</h3>
+		<h3 id="arrow">Arrow</h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I've an arrow!" data-pop data-pop-arrow>Hover
@@ -125,41 +126,44 @@
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3>Delay</h3>
+		<h3 id="delay">Delay</h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm delayed!" data-pop data-pop-delay="short" data-pop-arrow>Hover
 					me for 0.5 seconds!</button>
 			</div>
 			<div class="section-right">
-				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-pos="top" data-pop-delay="short"&gt;
-	Hover me for 1 second!
+				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="short"&gt;
+	Hover me for 0.5 seconds!
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm delayed!" data-pop data-pop-delay="medium">Hover
-					me for 2 seconds!</button>
+					me for 1.5 seconds!</button>
 			</div>
 			<div class="section-right">
 				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="medium"&gt;
-	Hover me for 2 seconds!
+	Hover me for 1.5 seconds!
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm delayed!" data-pop data-pop-delay="long">Hover
-					me for 5 seconds!</button>
+					me for 3 seconds!</button>
 			</div>
 			<div class="section-right">
 				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="long"&gt;
-	Hover me for 5 seconds!
+	Hover me for 3 seconds!
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3>Visibility</h3>
+		<h3 id="visibility">Visibility</h3>
+		<p>By default tooltips will show on hover and focus but what if you want a tooltip to always show? Then you can
+			simply add the attribute <i class="orange-text">data-pop-show</i>. This can also be used to programmatically show
+			and hide a tooltip by applying the attribute with the help of Javascript for example.</p>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow>
@@ -172,7 +176,20 @@
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3>CSS custom properties</h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I'm a tool(tip)" data-pop data-pop-arrow>
+					Click me to toggle tooltip!
+				</button>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-html">&lt;button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow&gt;
+	I'm a button!
+&lt;/button&gt;</code></pre>
+			</div>
+		</section>
+		<h3 id="css-custom-prop">CSS custom properties</h3>
+		<p>Introduction to css custom properties</p>
 		<section>
 			<table>
 				<tr>
@@ -235,8 +252,9 @@
 		<h3>Known issues</h3>
 		<section id="issues">
 			<h3 class="orange-text">Non-closing tags</h3>
-			<p>Since <span class="orange-text">Pop-Pop.css</span> makes use of pseudo elements it won't work on it's own with
-				non closing tags (img, input, hr etc.). In these cases you could wrap another tag around it and apply
+			<p>Since Pop-Pop.css makes use of pseudo elements it won't work on it's own with
+				non closing tags <span class="orange-text">(img, input, hr etc.)</span>. In these cases you could wrap another
+				tag around it and apply
 				Pop-Pop.css to it instead.</p>
 			<section>
 				<div class="section-left">
@@ -249,11 +267,13 @@
 				</div>
 			</section>
 			<h3 class="orange-text">Other pseudo elements</h3>
-			<p>If the element has another ::after or ::before pseudo element attached to it Pop-Pop.css won't be able to work
+			<p>If the element has another <i class="orange-text">::after</i> or <i class="orange-text">::before</i> pseudo
+				element attached to it Pop-Pop.css won't be able to work
 				correctly.</p>
 			<h3 class="orange-text">overflow: hidden;</h3>
 			<p>The tooltip will be cut off if the parent element has the attribute
-				<i>overflow: hidden;</i> enabled and there's limited space. This is unfortunately something that can't be solved
+				<i class="orange-text">overflow: hidden;</i> enabled and there's limited space. This is unfortunately something
+				that can't be solved
 				with CSS alone.</p>
 		</section>
 	</main>
