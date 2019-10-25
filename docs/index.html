@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="pop-pop.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"
+		integrity="sha256-77qGXu2p8NpfcBpTjw4jsMeQnz0vyh74f5do0cWjQ/Q=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -38,13 +40,13 @@
 		<h1 id="installation">Installation</h1>
 		<section class="installation">
 			<h4 class="orange-text">NPM or Yarn</h4>
-			<code>npm install @sn8z/pop-pop.css</code>
+			<div class="info-block">npm install @sn8z/pop-pop.css</div>
 			<br>
-			<code>yarn add @sn8z/pop-pop.css</code>
+			<div class="info-block">yarn add @sn8z/pop-pop.css</div>
 			<h4 class="orange-text">CDN</h4>
-			<code>insert info here</code>
+			<div class="info-block">insert info here</div>
 			<h4 class="orange-text">Download</h4>
-			<code>insert info here</code>
+			<div class="info-block">insert info here</div>
 		</section>
 		<h1 id="basic">Basic usage</h1>
 		<section>
@@ -53,7 +55,7 @@
 					'data-pop' to the tag where you want a tooltip to appear.</p>
 			</div>
 			<div class="section-right">
-				<code>&lt;p aria-label="Tooltip text" data-pop&gt;...&lt;/p&gt;</code>
+				<pre><code class="language-html">&lt;p aria-label="Tooltip text" data-pop&gt;...&lt;/p&gt;</code></pre>
 			</div>
 		</section>
 		<h1 id="docs">Docs</h1>
@@ -73,7 +75,9 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm above!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm above!" data-pop data-pop-pos="top"&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -82,7 +86,9 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm to the right!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm to the right!" data-pop data-pop-pos="top"&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -91,7 +97,9 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm below!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm below!" data-pop data-pop-pos="top"&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -100,7 +108,9 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm to the left!" data-pop data-pop-pos="top"&gt;Hover	me!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm to the left!" data-pop data-pop-pos="top"&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<h3>Arrow</h3>
@@ -110,7 +120,9 @@
 					me!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I've an arrow!" data-pop data-pop-arrow&gt;Hover	me!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I've an arrow!" data-pop data-pop-arrow&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<h3>Delay</h3>
@@ -120,7 +132,9 @@
 					me for 0.5 seconds!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-pos="top" data-pop-delay="short"&gt;Hover	me for 1 second!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-pos="top" data-pop-delay="short"&gt;
+	Hover me for 1 second!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -129,7 +143,9 @@
 					me for 2 seconds!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="medium"&gt;Hover	me for 2 seconds!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="medium"&gt;
+	Hover me for 2 seconds!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<section>
@@ -138,7 +154,9 @@
 					me for 5 seconds!</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="long"&gt;Hover	me for 5 seconds!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm delayed!" data-pop data-pop-delay="long"&gt;
+	Hover me for 5 seconds!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<h3>Visibility</h3>
@@ -149,7 +167,9 @@
 				</button>
 			</div>
 			<div class="section-right">
-				<code>&lt;button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow&gt;I'm a button!&lt;/button&gt;</code>
+				<pre><code class="language-html">&lt;button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow&gt;
+	I'm a button!
+&lt;/button&gt;</code></pre>
 			</div>
 		</section>
 		<h3>CSS custom properties</h3>
@@ -225,7 +245,7 @@
 					</span>
 				</div>
 				<div class="section-right">
-					<code>&lt;span aria-label="POP POP!" data-pop&gt;&lt;img src="..."/&gt;&lt;/span&gt;</code>
+					<pre><code class="language-html">&lt;span aria-label="POP POP!" data-pop&gt;&lt;img src="..."/&gt;&lt;/span&gt;</code></pre>
 				</div>
 			</section>
 			<h3 class="orange-text">Other pseudo elements</h3>
@@ -241,6 +261,8 @@
 		<p>Made by <a href="https://github.com/Sn8z" target="blank">Sn8z</a></p>
 	</footer>
 	<script src="scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"
+		integrity="sha256-HWJnMZHGx7U1jmNfxe4yaQedmpo/mtxWSIXvcJkLIf4=" crossorigin="anonymous"></script>
 </body>
 
 </html>
