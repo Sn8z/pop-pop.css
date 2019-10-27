@@ -129,7 +129,7 @@
 		<h3 id="delay">Delay</h3>
 		<section>
 			<div class="section-left">
-				<button aria-label="I'm delayed!" data-pop data-pop-delay="short" data-pop-arrow>Hover
+				<button aria-label="I'm delayed!" data-pop data-pop-delay="short">Hover
 					me for 0.5 seconds!</button>
 			</div>
 			<div class="section-right">
@@ -178,9 +178,10 @@
 		</section>
 		<section>
 			<div class="section-left">
-				<button aria-label="I'm a tool(tip)" data-pop data-pop-arrow>
+				<button onclick="toggleVisibility()">
 					Click me to toggle tooltip!
 				</button>
+				<p id="toggle-demo"aria-label="I'm a tool(tip)" data-pop="bottom" data-pop-arrow>I'll show a tooltip!</p>
 			</div>
 			<div class="section-right">
 				<pre><code class="language-html">&lt;button aria-label="I'm always visible!" data-pop data-pop-show data-pop-arrow&gt;
