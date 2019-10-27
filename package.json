@@ -4,8 +4,8 @@
 	"description": "A pure CSS tooltip library",
 	"main": "pop-pop.css",
 	"scripts": {
-		"build:all": "yarn build && yarn build:min && yarn build:docs",
-		"build": "node-sass src/pop-pop.scss dist/pop-pop.css",
+		"build:all": "yarn build && yarn build:docs",
+		"build": "node-sass src/pop-pop.scss dist/pop-pop.css && yarn build:min",
 		"build:min": "node-sass src/pop-pop.scss dist/pop-pop.min.css --output-style compressed",
 		"build:docs": "node-sass src/pop-pop.scss docs/pop-pop.min.css --output-style compressed"
 	},
