@@ -5,4 +5,4 @@ setPopBgColor = (color) => {
 
 toggleVisibility = () => {
 	document.getElementById('toggle-demo').toggleAttribute('data-pop-show');
-}
+};

@@ -25,7 +25,7 @@ yarn add @sn8z/pop-pop.css
 ### CDN
 You can import the CSS from unpkg.
 ```
-<link rel="stylesheet" href="<insert unpkg URL here>">
+Coming soon...
 ```
 ### Download
 You can also download the CSS from GitHub and include it to your html as you would normally do.

@@ -1,13 +1,8 @@
 /* Pop-Pop.css */
 
 /* TODO
-	- Sizes attribute (small / medium / large)
-	- Line breaks
-	- Background color attribute
-	- Text color attribute
-	- Border-radius attribute (?)
-	- Box shadow attribute (?)
-	- z-index variable
+	- Line breaks attribute
+	- Box shadow css property
 	
 	- DOCS
 */
@@ -25,6 +20,7 @@
 	--pop-offset: 15px;
 	--pop-font-size: 12px;
 	--pop-arrow-size: 5px;
+	--pop-z: 999;
 }
 
 /* Mixins */
@@ -35,7 +31,7 @@
 	position: absolute;
 	border-style: solid;
 	border-width: var(--pop-arrow-size);
-	z-index: 1000;
+	z-index: calc(var(--pop-z) + 1);
 }
 
 @mixin pop-pop-after {
@@ -54,7 +50,7 @@
 	font-size: var(--pop-font-size);
 	line-height: var(--pop-font-size);
 	white-space: nowrap;
-	z-index: 999;
+	z-index: var(--pop-z);
 }
 
 @mixin transition-delay {
@@ -66,6 +62,12 @@
 	}
 	&[data-pop-delay="long"]:hover::after, &[data-pop-delay="long"]:hover::before {
 		transition-delay: 3s;
+	}
+}
+
+@mixin no-radius {
+	&[data-pop-no-radius]:hover::after, &[data-pop-no-radius]:focus::after {
+		border-radius: 0px;
 	}
 }
 
