@@ -25,12 +25,12 @@ yarn add @sn8z/pop-pop.css
 ### CDN
 You can import the CSS from unpkg.
 ```
-Coming soon...
+<link rel="stylesheet" href="https://unpkg.com/@sn8z/pop-pop.css@latest/dist/pop-pop.min.css">
 ```
 ### Download
 You can also download the CSS from GitHub and include it to your html as you would normally do.
 ```
-<link rel="stylesheet" href="pop-pop.css">
+<link rel="stylesheet" href="pop-pop.min.css">
 ```
 ### Usage
 To add a tooltip simply add the attribute *data-pop* and an *aria-label* to the tag where you want it to appear.
