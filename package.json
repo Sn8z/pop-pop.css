@@ -1,6 +1,6 @@
 {
 	"name": "@sn8z/pop-pop.css",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "A pure CSS tooltip library",
 	"main": "pop-pop.css",
 	"scripts": {
