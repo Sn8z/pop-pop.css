@@ -5,6 +5,8 @@
   --pop-text-color: #efefef;
 	--pop-bg-color: #252525;
 	--pop-min-width: 0px;
+	--pop-word-wrap: none;
+	--pop-white-space: nowrap;
 	--pop-shadow: 0px 0px 5px var(--pop-shadow-color);
   --pop-shadow-color: #252525;
 	--pop-transition-delay: 0.2s;
@@ -44,7 +46,8 @@
 	padding: var(--pop-padding);
 	font-size: var(--pop-font-size);
 	line-height: var(--pop-font-size);
-	white-space: nowrap;
+	white-space: var(--pop-white-space);
+	word-wrap: var(--pop-word-wrap);
 	z-index: var(--pop-z);
 }
 
@@ -73,7 +76,7 @@
 }
 
 @mixin multiline {
-	&[data-pop-multiline]::after, &[data-pop-multiline]::after {
+	&[data-pop-multiline]::after {
 		white-space: normal;
 		word-wrap: break-word;
 		min-width: 120px;
