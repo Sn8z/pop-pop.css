@@ -9,7 +9,7 @@ A __pure CSS__ tooltip library with __no dependencies__ and support for __CSS cu
 
 * No dependencies
 * Pure CSS
-* &lt; 10kb minified
+* ~ 10kb minified (~ 1kb when minified & Gzipped)
 * Customizable
 * Supports CSS custom properties
 

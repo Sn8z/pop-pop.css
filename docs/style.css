@@ -27,6 +27,16 @@ h1, h2 , h3, h4, h5, h6, p {
 	color: white;
 }
 
+#unique::after {
+	--pop-bg-color: #FF0000;
+	--pop-font-size: 16px;
+	--pop-padding: 20px;
+}
+
+#unique::before {
+	--pop-bg-color: #FF0000;
+}
+
 .orange-text {
 	color: #f7be16;
 }

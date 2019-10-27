@@ -61,6 +61,8 @@
 			</div>
 		</section>
 		<h1 id="docs">Docs</h1>
+		<p>Attributes marked with <span class="orange-text">*</span> can be globally modified with the use of CSS custom
+			properties instead of applying the attribute everywhere.</p>
 		<section id="examples-nav" class="info-block">
 			<a href="#positioning">Positioning</a>
 			<a href="#arrow">Arrow</a>
@@ -69,7 +71,7 @@
 			<a href="#css-custom-prop">CSS custom properties</a>
 			<a href="#issues">Limitations</a>
 		</section>
-		<h3 id="positioning">Positioning</h3>
+		<h3 id="positioning">Positioning <span class="orange-text">(data-pop)</span></h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm above!" data-pop="top">Hover
@@ -114,7 +116,7 @@
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3 id="arrow">Arrow</h3>
+		<h3 id="arrow">Arrow <span class="orange-text">(data-pop-arrow)</span></h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I've an arrow!" data-pop data-pop-arrow>Hover
@@ -126,7 +128,49 @@
 &lt;/button&gt;</code></pre>
 			</div>
 		</section>
-		<h3 id="delay">Delay</h3>
+		<h3 id="multiline">Multiline<span class="orange-text">*</span> <span class="orange-text">(data-pop-multiline)</span>
+		</h3>
+		<section>
+			<div class="section-left">
+				<button
+					aria-label="I'm a long tooltip and will in this case use multiple rows to show my information!"
+					data-pop="right" data-pop-arrow data-pop-multiline>
+					Hover me!
+				</button>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-html">&lt;button aria-label="..." data-pop data-pop-multiline&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
+			</div>
+		</section>
+		<h3 id="radius">Radius<span class="orange-text">*</span> <span class="orange-text">(data-pop-no-radius)</span></h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I've no border-radius" data-pop data-pop-no-radius>
+					Hover me!
+				</button>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-html">&lt;button aria-label="I've no border-radius" data-pop data-pop-no-radius&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
+			</div>
+		</section>
+		<h3 id="shadow">Shadow<span class="orange-text">*</span> <span class="orange-text">(data-pop-no-shadow)</span></h3>
+		<section>
+			<div class="section-left">
+				<button aria-label="I've no box-shadow" data-pop data-pop-no-shadow>
+					Hover me!
+				</button>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-html">&lt;button aria-label="I've no box-shadow" data-pop data-pop-no-shadow&gt;
+	Hover me!
+&lt;/button&gt;</code></pre>
+			</div>
+		</section>
+		<h3 id="delay">Delay<span class="orange-text">*</span> <span class="orange-text">(data-pop-delay)</span></h3>
 		<section>
 			<div class="section-left">
 				<button aria-label="I'm delayed!" data-pop data-pop-delay="short">Hover
@@ -190,7 +234,18 @@
 			</div>
 		</section>
 		<h3 id="css-custom-prop">CSS custom properties</h3>
-		<p>Introduction to css custom properties</p>
+		<section>
+			<div class="section-left">
+				<p>You can use CSS custom properties to customize your tooltips even further! This will reduce the HTML
+					attribute clutter and give you the possibility to globally modify your tooltips. This can be done by
+					overwriting the CSS variables in your own CSS file.</p>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-css">:root {
+  --pop-bg-color: #ff0000;
+}</code></pre>
+			</div>
+		</section>
 		<section>
 			<table>
 				<tr>
@@ -209,9 +264,14 @@
 					<td>Tooltip background color</td>
 				</tr>
 				<tr>
+					<td>--pop-shadow</td>
+					<td>0px 0px 5px var(--pop-shadow-color)</td>
+					<td>Tooltip box-shadow settings</td>
+				</tr>
+				<tr>
 					<td>--pop-shadow-color</td>
 					<td>#252525</td>
-					<td>Tooltip shadow color</td>
+					<td>Tooltip box-shadow color</td>
 				</tr>
 				<tr>
 					<td>--pop-transition-delay</td>
@@ -254,6 +314,25 @@
 					<td>The z-index of the tooltip</td>
 				</tr>
 			</table>
+		</section>
+		<section>
+			<div class="section-left">
+				<p id="unique" aria-label="Text here" data-pop data-pop-show data-pop-arrow>You can also style a single tooltip
+					by targeting its element <i>id</i> or <i>class</i> and overwrite the CSS properties. Make
+					sure you target the <span class="orange-text">::after</span> pseudo element if you want to style the tooltip
+					and <span class="orange-text">::before</span> if you want to style the arrow!</p>
+			</div>
+			<div class="section-right">
+				<pre><code class="language-html">&lt;p id="unique" aria-label="Text here" data-pop data-pop-show data-pop-arrow&gt;...&lt;/p&gt;</code></pre>
+				<pre><code class="language-css">#unique::after {
+  --pop-bg-color: #FF0000;
+  --pop-font-size: 16px;
+  --pop-padding: 20px;
+}
+#unique::before {
+  --pop-bg-color: #FF0000;
+}</code></pre>
+			</div>
 		</section>
 		<h3>Known issues</h3>
 		<section id="issues">

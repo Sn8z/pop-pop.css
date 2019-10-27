@@ -1,15 +1,10 @@
 /* Pop-Pop.css */
-/* TODO
-	- Line breaks attribute
-	- Box shadow css property
-	
-	- DOCS
-*/
 /* Defaults & variables */
 :root {
   --pop-text-color: #efefef;
   --pop-bg-color: #252525;
   --pop-min-width: 0px;
+  --pop-shadow: 0px 0px 5px var(--pop-shadow-color);
   --pop-shadow-color: #252525;
   --pop-transition-delay: 0.2s;
   --pop-animation-speed: 0.1s;
@@ -49,13 +44,14 @@
     opacity: 1;
     content: attr(aria-label);
     min-width: var(--pop-min-width);
+    width: auto;
     text-align: center;
     transition: opacity var(--pop-animation-speed) linear;
     transition-delay: var(--pop-transition-delay);
     position: absolute;
     color: var(--pop-text-color);
     border-radius: var(--pop-border-radius);
-    box-shadow: 0px 0px 5px var(--pop-shadow-color);
+    box-shadow: var(--pop-shadow);
     background-color: var(--pop-bg-color);
     padding: var(--pop-padding);
     font-size: var(--pop-font-size);
@@ -68,6 +64,14 @@
     transition-delay: 1.5s; }
   [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-delay="long"]:hover::after, [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-delay="long"]:hover::before, [data-pop="top"][aria-label][data-pop-delay="long"]:hover::after, [data-pop="top"][aria-label][data-pop-delay="long"]:hover::before {
     transition-delay: 3s; }
+  [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-no-radius]:hover::after, [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-no-radius]:focus::after, [data-pop="top"][aria-label][data-pop-no-radius]:hover::after, [data-pop="top"][aria-label][data-pop-no-radius]:focus::after {
+    border-radius: 0px; }
+  [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-no-shadow]:hover::after, [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-no-shadow]:focus::after, [data-pop="top"][aria-label][data-pop-no-shadow]:hover::after, [data-pop="top"][aria-label][data-pop-no-shadow]:focus::after {
+    box-shadow: none; }
+  [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-multiline]::after, [data-pop]:not([data-pop="bottom"]):not([data-pop="right"]):not([data-pop="left"])[aria-label][data-pop-multiline]::after, [data-pop="top"][aria-label][data-pop-multiline]::after, [data-pop="top"][aria-label][data-pop-multiline]::after {
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 120px; }
 
 [data-pop="bottom"][aria-label] {
   position: relative; }
@@ -96,13 +100,14 @@
     opacity: 1;
     content: attr(aria-label);
     min-width: var(--pop-min-width);
+    width: auto;
     text-align: center;
     transition: opacity var(--pop-animation-speed) linear;
     transition-delay: var(--pop-transition-delay);
     position: absolute;
     color: var(--pop-text-color);
     border-radius: var(--pop-border-radius);
-    box-shadow: 0px 0px 5px var(--pop-shadow-color);
+    box-shadow: var(--pop-shadow);
     background-color: var(--pop-bg-color);
     padding: var(--pop-padding);
     font-size: var(--pop-font-size);
@@ -115,6 +120,14 @@
     transition-delay: 1.5s; }
   [data-pop="bottom"][aria-label][data-pop-delay="long"]:hover::after, [data-pop="bottom"][aria-label][data-pop-delay="long"]:hover::before {
     transition-delay: 3s; }
+  [data-pop="bottom"][aria-label][data-pop-no-radius]:hover::after, [data-pop="bottom"][aria-label][data-pop-no-radius]:focus::after {
+    border-radius: 0px; }
+  [data-pop="bottom"][aria-label][data-pop-no-shadow]:hover::after, [data-pop="bottom"][aria-label][data-pop-no-shadow]:focus::after {
+    box-shadow: none; }
+  [data-pop="bottom"][aria-label][data-pop-multiline]::after, [data-pop="bottom"][aria-label][data-pop-multiline]::after {
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 120px; }
 
 [data-pop="left"][aria-label] {
   position: relative; }
@@ -143,13 +156,14 @@
     opacity: 1;
     content: attr(aria-label);
     min-width: var(--pop-min-width);
+    width: auto;
     text-align: center;
     transition: opacity var(--pop-animation-speed) linear;
     transition-delay: var(--pop-transition-delay);
     position: absolute;
     color: var(--pop-text-color);
     border-radius: var(--pop-border-radius);
-    box-shadow: 0px 0px 5px var(--pop-shadow-color);
+    box-shadow: var(--pop-shadow);
     background-color: var(--pop-bg-color);
     padding: var(--pop-padding);
     font-size: var(--pop-font-size);
@@ -162,6 +176,14 @@
     transition-delay: 1.5s; }
   [data-pop="left"][aria-label][data-pop-delay="long"]:hover::after, [data-pop="left"][aria-label][data-pop-delay="long"]:hover::before {
     transition-delay: 3s; }
+  [data-pop="left"][aria-label][data-pop-no-radius]:hover::after, [data-pop="left"][aria-label][data-pop-no-radius]:focus::after {
+    border-radius: 0px; }
+  [data-pop="left"][aria-label][data-pop-no-shadow]:hover::after, [data-pop="left"][aria-label][data-pop-no-shadow]:focus::after {
+    box-shadow: none; }
+  [data-pop="left"][aria-label][data-pop-multiline]::after, [data-pop="left"][aria-label][data-pop-multiline]::after {
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 120px; }
 
 [data-pop="right"][aria-label] {
   position: relative; }
@@ -190,13 +212,14 @@
     opacity: 1;
     content: attr(aria-label);
     min-width: var(--pop-min-width);
+    width: auto;
     text-align: center;
     transition: opacity var(--pop-animation-speed) linear;
     transition-delay: var(--pop-transition-delay);
     position: absolute;
     color: var(--pop-text-color);
     border-radius: var(--pop-border-radius);
-    box-shadow: 0px 0px 5px var(--pop-shadow-color);
+    box-shadow: var(--pop-shadow);
     background-color: var(--pop-bg-color);
     padding: var(--pop-padding);
     font-size: var(--pop-font-size);
@@ -209,3 +232,11 @@
     transition-delay: 1.5s; }
   [data-pop="right"][aria-label][data-pop-delay="long"]:hover::after, [data-pop="right"][aria-label][data-pop-delay="long"]:hover::before {
     transition-delay: 3s; }
+  [data-pop="right"][aria-label][data-pop-no-radius]:hover::after, [data-pop="right"][aria-label][data-pop-no-radius]:focus::after {
+    border-radius: 0px; }
+  [data-pop="right"][aria-label][data-pop-no-shadow]:hover::after, [data-pop="right"][aria-label][data-pop-no-shadow]:focus::after {
+    box-shadow: none; }
+  [data-pop="right"][aria-label][data-pop-multiline]::after, [data-pop="right"][aria-label][data-pop-multiline]::after {
+    white-space: normal;
+    word-wrap: break-word;
+    min-width: 120px; }
