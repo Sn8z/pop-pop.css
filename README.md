@@ -1,4 +1,9 @@
 # Pop-Pop.css
+![npm](https://img.shields.io/npm/v/@sn8z/pop-pop.css?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@sn8z/pop-pop.css?style=flat-square)
+![npm](https://img.shields.io/npm/dw/@sn8z/pop-pop.css?style=flat-square)
+[![GitHub license](https://img.shields.io/github/license/Sn8z/pop-pop.css?style=flat-square)](https://github.com/Sn8z/pop-pop.css/blob/master/LICENSE)
+
 A __pure CSS__ tooltip library with __no dependencies__ and support for __CSS custom properties__.
 
 ## Demo
@@ -9,9 +14,10 @@ A __pure CSS__ tooltip library with __no dependencies__ and support for __CSS cu
 
 * No dependencies
 * Pure CSS
-* ~ 10kb minified (~ 1kb when minified & Gzipped)
+* ~ 14kb minified (~ 1,3kb when minified & Gzipped)
 * Customizable
 * Supports CSS custom properties
+* Supports multiple browsers
 
 ## Installation & Basic usage
 
@@ -21,6 +27,15 @@ npm install @sn8z/pop-pop.css
 ```
 ```
 yarn add @sn8z/pop-pop.css
+```
+You can then import the normal CSS file or the minified version from the *dist* folder in the package.
+
+```
+@import "node_modules/@sn8z/pop-pop.css/dist/pop-pop.min.css";
+```
+or
+```
+<link rel="stylesheet" href="node_modules/@sn8z/pop-pop.css/dist/pop-pop.min.css">
 ```
 ### CDN
 You can import the CSS from unpkg.
