@@ -33,6 +33,6 @@
 	},
 	"homepage": "https://sn8z.github.io/pop-pop.css/",
 	"devDependencies": {
-		"node-sass": "^4.12.0"
+		"node-sass": "^7.0.0"
 	}
 }
